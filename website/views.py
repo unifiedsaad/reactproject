@@ -1,3 +1,11 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .models import Website
+from website.serializers import WebsiteSerializer
+from rest_framework import generics
+from rest_framework.permissions import IsAdminUser
+
+class WebsiteDetail(generics.RetrieveAPIView):
+    queryset = Website.objects.all()
+    serializer_class = WebsiteSerializer
+    permission_classes = []
