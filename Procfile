@@ -1,0 +1,1 @@
+web: gunicorn reactproject.wsgi --log-file -
