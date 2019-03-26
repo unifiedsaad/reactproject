@@ -80,6 +80,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 CORS_ORIGIN_WHITELIST = (
     'localhost:3000',
+    'talhamuneer.com',
+    'talhamuneer'
 )
 
 # Database
