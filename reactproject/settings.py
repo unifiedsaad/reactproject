@@ -51,6 +51,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.BrokenLinkEmailsMiddleware',
     'django.middleware.common.CommonMiddleware',
+'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'reactproject.urls'
@@ -75,6 +76,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'reactproject.wsgi.application'
 
 CORS_ORIGIN_ALLOW_ALL = False
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 CORS_ORIGIN_WHITELIST = (
     'localhost:3000',
